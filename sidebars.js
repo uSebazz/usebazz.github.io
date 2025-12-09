@@ -47,6 +47,7 @@ const sidebars = {
         },
       ],
     },
+    'credits',
   ],
 };
 
