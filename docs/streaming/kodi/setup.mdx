@@ -76,48 +76,45 @@ Kodi itself does not require much configuration out of the box. However, there a
 
 ## Debrid Service
 
-**It is required** and most torrent addons can not be used without one. However, using a debrid service has many benefits that can greatly enhance your streaming experience.
+A debrid service is **highly recommended** for Kodi and most torrent-based addons. Many addons **will not work** without one. Beyond compatibility, a debrid service greatly improves streaming reliability and quality.
 
 ### What is a debrid service?
 
-A debrid service is a service that allows you to generate unrestricted (up to 1gbps) download links for torrents and other files on supported hosters. We talk more about debrid services in the [details page](/streaming/kodi/details#debrid-services).
+A debrid service generates **unrestricted, high-speed (often up to 1 Gbps)** HTTPS links from torrents and supported hosters.
 
-It brings the following benefits:
+We cover debrid options in more depth on the [details page](/streaming/kodi/details#debrid-services).
 
-- Using a debrid service allows you to stream torrents without the risk of receiving a notice from your ISP as you would be streaming through HTTPS
-- While you are streaming something, you are not reliant on the number of seeders and can stream at up to 1gbps speeds. This makes it possible to stream some of the highest quality content available (4K, DV, HDR, Dolby Atmos, etc.) without buffering as long as your internet connection can handle it.
-- If you are using a debrid service, a VPN is not required as you are streaming through HTTPS.
-- You can use it for more than just Kodi. You can use it to download any type of file, whether that be games, software or audio. If it is a torrent or a file on a supported hoster, you can download it through your debrid service.
+### Benefits
 
-However, the drawbacks of using a debrid service are that most do not seed the torrents and will also restrict usage to one IP address at a time.
-This means that you are not contributing to the torrent and that you can only use the service in one location at a time.
+- **Privacy:** You stream over HTTPS, so your ISP cannot see torrent traffic.
+- **High speed:** Playback no longer depends on seeders. Debrid servers fetch torrents instantly and stream to you at high speeds (often 1 Gbps). This allows smooth playback of 4K, HDR, DV, Dolby Atmos, and other high-bitrate formats.
+- **No VPN required:** Traffic is encrypted and handled by the debrid service.
+- **Use beyond Kodi:** You can download games, software, music, or any supported hoster/torrent file through your debrid account.
 
-There are some exceptions to this, which are mentioned below.
+### Drawbacks
 
-### Should I use a debrid service?
+Most debrid providers:
 
-The answer to this question is dependent on your personal circumstances.
+- **Do not seed torrents** back to the swarm.
+- **Limit usage to one IP at a time**, so you can only use the service from one location at once.
 
-- Whether torrenting puts you at risk of receiving a notice from your ISP
-- The popularity (number of seeders) of the content you want to watch
-- Whether your internet speed is sufficient to warrant a debrid service
+Some premium services offer limited multi-IP support or optional seeding.
 
-The main reason to use a debrid service is to avoid the risks of torrenting.
-As explained earlier, you are streaming through HTTPS and the debrid service essentially becomes the middle-man.
-However, if you are in a country where torrenting is not an issue, then a debrid service or VPN is not needed to avoid receiving a notice from your ISP.
+## Should I use a debrid service?
 
-The next big reason is to avoid buffering.
-However, whether it buffers or not depends on the type of content you are watching and your internet speed.
-If the content you want to watch is popular and has a lot of seeders, then you will be able to stream it at a high quality without buffering.
-However, torrents of extremely high quality content may still buffer even with a lot of seeders.
+It depends on your situation. Consider:
 
-Something that is often ignored is that a debrid service cannot increase your download speeds.
-If your internet speed is already slow, then a debrid service will not help you stream higher quality content.
-You need to have a fast internet speed yourself to capitalise on the benefits of a debrid service.
+- **Legal risk:** If torrenting is monitored in your country, debrid (or a VPN) reduces risk.
+- **Seeder availability:** If you often watch content with few or no seeders, debrid removes this issue.
+- **Your internet speed:** Debrid cannot increase your own connection speed. If your internet is slow, you may still buffer.
 
-With all that being said, if torrenting is not an issue, the best way to determine whether you need a debrid service is to try streaming without one.
-You can then try watching the content you want to watch and see if it buffers at the quality you want to watch in.
-If it does (and your speeds are not the limiting factor), then you may want to consider using a debrid service.
+### When you _don’t_ need a debrid service
+
+If torrenting is not an issue in your country, the content you watch is well-seeded, and your internet is fast, you can stream without debrid.
+
+### When you _should_ get one
+
+If you experience buffering **despite having fast internet**, or you want reliable playback of very high-quality content, a debrid service is highly recommended.
 
 ### Which debrid service should I use?
 
@@ -150,7 +147,7 @@ To compare the cost of each debrid service, I made a table of the prices of each
 Both services have a rewards program that allows you to earn free days.
 
 - Torbox has a referral program that gives you +7 days x Months purchased for each person that signs up through your link. **(only for first time purchases)**
-  - Example: If 2 persons sign up through your link and you purchase a 3 month subscription, you get 2 * 3 * 7 = 42 free days.
+  - Example: If 2 persons sign up through your link and you purchase a 3 month subscription, you get 2 _ 3 _ 7 = 42 free days.
 - Real-Debrid has a points system where you earn points. that can be redeemed for free days.
   - 1000 points = 30 days
 
@@ -232,65 +229,74 @@ import Torbox from '@site/docs/streaming/kodi/debrid/torbox/_setup.mdx';
 
 ## Usenet
 
-I will now go through what Usenet is and why you may want to use it.
+Usenet is **optional** for Kodi users.  
+Most people will not need it and can skip directly to [Setting up your addons](#setting-up-addons).
 
-Usenet is completely optional, and for the average user, it is not needed and should not be considered, simply skip to [Setting up your addons](#setting-up-addons).
-You may read the [Should I use Usenet?](#should-i-use-usenet) section to determine if you need it.
+If you’re unsure, read the [Should I use Usenet?](#should-i-use-usenet) section below.
 
 ### What is Usenet?
 
-Usenet is a form of decentralised internet communication that consists of various different "newsgroups".
-You can think of a newsgroup as a forum where people can post messages and files.
-For the purpose of Kodi, the files we are interested in are the binaries (NZB files) for video content that are posted to the newsgroups.
+Usenet is a long-standing, decentralised communication system made up of thousands of “newsgroups.”  
+You can think of a newsgroup as a forum where users post messages and files.
 
-Each different newsgroup is dedicated to a specific topic. These newsgroups can have their own moderators and rules.
-This is very similar to subreddits on Reddit, for example.
+For Kodi, the relevant posts are **binary files** (NZBs) that contain video content.  
+Many of the highest-quality releases—larger sizes, untouched disc rips, niche content—appear here before or instead of torrents.
 
-#### Providers
+Each newsgroup has its own topic, rules, and moderators, similar to subreddits on Reddit.
 
-To access Usenet, you need a Usenet provider.
-A provider will host the servers that store the content from the newsgroups.
-This provider will give you access to their servers where you can download content from the newsgroups.
-Usenet providers will be paid services due to the real costs of hosting the servers and the bandwidth required to provide access to the content.
+### Providers
 
-The content on different Usenet providers is theoretically the same as the content on all newsgroups is mirrored across all providers.
-However, due to issues like data corruption, takedowns, and different retention periods, some content may not be available on all providers.
+To access Usenet, you need a **Usenet provider**.  
+They host the servers that store newsgroup content and give you access to download from them.
 
-For this guide, we will only be considering Easynews and TorBox as Usenet providers as they are the only ones that have addons for Kodi.
-However, generally, the factors to consider when choosing a Usenet provider:
+Providers are paid services due to the storage and bandwidth costs required to keep copies of all newsgroup data.
 
-- Data Limits: Depending on your plan, you may have a fixed amount of data you can download per month. You will have to consider how much data you will be downloading and choose a plan accordingly.
-- Retention: This is the amount of time that the provider will store the content for. The longer the retention, the better.
-- Connections: This is the number of connections you can have to the server at the same time. The more connections you have, the more devices you can use the service on at the same time, as well as the number of files you can download at the same time.
+While all providers theoretically mirror the same content, real-world differences exist due to:
 
-#### Indexers
+- DMCA/takedown policies
+- Corrupted uploads
+- Varying retention times (how long they store files)
 
-Usenet has a lot of content, and to search for this content, most providers will have some sort of search engine that you can use.
-However, you may not be satisfied with the search engine provided by your Usenet provider. There may be content on the newsgroups that you cannot find through their search engine.
+For Kodi, we focus on **Easynews** and **TorBox**, since both have community-supported addons.
 
-This is where indexers come in. Indexers are websites that index the content on the newsgroups and allow you to search for content.
-As independent, dedicated services to search for content, they are usually better than the search engine on your Usenet provider.
+When choosing a Usenet provider, consider:
 
-You can use multiple indexers at the same time to increase the chances of finding the content you want.
-Different indexers may specialise in different types of content.
+- **Data limits:** Some plans have monthly caps. Choose based on how much you plan to download.
+- **Retention:** How many days (or years) of content the provider keeps. More is better.
+- **Connections:** Number of simultaneous connections. This affects multi-device usage and download concurrency.
+
+### Indexers
+
+Providers often include built-in search tools, but these may miss content.
+
+**Indexers** are independent websites that crawl and index newsgroups.  
+They usually offer better search accuracy and more detailed results.
+
+Using multiple indexers increases your chances of finding specific or obscure content, and some indexers specialise in particular types of releases.
 
 ### Should I use Usenet?
 
-The main reason to use Usenet is to access more niche content as well as getting files of larger sizes (and thus higher quality, usually) than what is available through torrents.
+The main reason to use Usenet is to access:
 
-Just like with debrid services:
+- **Extremely high-quality files** (larger sizes, full disc backups)
+- **Niche or regional content** that may not exist on torrents
+- **Content unavailable or poorly seeded on P2P networks**
 
-- Usenet providers offer extremely fast download speeds, which mean that only your internet speed will limit the quality of the content you can watch.
-- The content is aquired through HTTP with SSL encryption, so you are not at risk of receiving a notice from your ISP.
-- Usenet can be used for more than just Kodi. You can download any type of file, it doesn't have to be video files. If it is on Usenet, you can download it.
+Like debrid services:
 
-Most people will not need to use Usenet. Torrents are usually sufficient.
-Even if you may need to use Usenet, you will most likely use it as a backup to your debrid service.
+- Usenet is **very fast**, often limited only by your own internet speed.
+- Downloads use **HTTPS/SSL**, so ISP notices are not an issue.
+- You can use Usenet for anything—not just Kodi—if the files exist on the network.
 
-However, in some cases, where torrents are not sufficient - such as for German content - Usenet may be the only way to access the content you want.
+However, for **most people**, torrents + a debrid service are enough.
 
-If you are currently satisfied with your debrid service, then I do not recommend using Usenet.
-However, it can act as a backup to your debrid service if you want to be prepared for any situation.
+Usenet typically becomes useful as:
+
+- a **backup** when torrents fail,
+- or the **only option** for certain regions (e.g., much German content).
+
+If you’re already satisfied with your debrid service and have no issues with buffering or missing content, Usenet is **not necessary**.  
+But if you want maximum completeness or a fallback option, it can complement your setup.
 
 ### How to use Usenet with Kodi?
 
@@ -347,9 +353,7 @@ Please refer to the key below to understand the different types of addons.
 | :cloud: | Debrid | Streams torrents via HTTPS through a debrid service.<br/>Higher quality (4K, DV, HDR) and reduced buffering without exposing your IP. |
 | :newspaper: | Usenet | Links from Usenet newsgroups.<br/>Great for niche content and large, high-quality files with very fast speeds. |
 
-:::tip
-If an addon only has the :cloud: icon, then it requires a debrid service.
-:::
+import POV from '@site/docs/streaming/kodi/addons/pov.mdx';
 
 <details>
   <summary>**POV** :cloud: :newspaper:</summary>
@@ -359,4 +363,6 @@ If an addon only has the :cloud: icon, then it requires a debrid service.
     addonName="POV"
     categories={['Video add-ons']}
   ></AddonInstallSteps>
+
+  <POV/>
 </details>
