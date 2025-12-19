@@ -18,7 +18,7 @@ export default function ReferralButton({
         >
           <span class="tbtext">
             <img
-              src="https://torbox.app/assets/logo-57adbf99.svg"
+              src="https://torbox.app/logo.svg "
               class="tbimg"
               alt="Torbox referral"
             />
